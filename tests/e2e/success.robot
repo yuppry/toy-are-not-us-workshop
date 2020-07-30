@@ -1,0 +1,15 @@
+    *** Settings ***
+Resource    keyword-toy.robot
+Test Setup    เปิดเว็บtoy-r-not-usขึ้นมา
+Test Template    ค้นหาสินค้าผ่านToy R not Us
+Test Teardown    ปิดbrowser
+
+*** Test Cases ***                                                                                  AGE      GENDER    TOYID             TOYNAME                 QTY                 TOYNAME             SHIPPING     QTY       FULLNAME        ADDRESS1    ADDRESS2         CITY            PROVINCE     POSTCODE    PAYMENT  
+ซื้อสินค้าSailboat จำนวน 4 ชิ้น โดยชำระผ่าน Debit Card:KBank และจัดส่งสินค้าผ่าน Kerry                        over8      Male      15               Sailboat                 4                  Sailboat             Kerry        4      พัชราภา ไชยเชื้อ      3/25		     -        Mueang Phichit	  Phichit	     66000       KBank
+ซื้อสินค้าEarth DVD Game จำนวน 1 ชิ้น โดยชำระผ่าน Debit Card:SCB และจัดส่งสินค้าผ่าน Line Man                 over8     Neutral    11             Earth DVD Game             1                Earth DVD Game         Line Man     1      ตะวัน วิหครัตน์	    57/539		  -          KlongToey	       Bangkok	      10110       SCB
+ซื้อสินค้าHorses and Unicorns Set จำนวน 1 ชิ้น โดยชำระ Debit Card:TMB และจัดส่งสินค้าผ่าน EMS                3_to_5    Neutral     3        Horses and Unicorns Set         1           Horses and Unicorns Set     EMS          1      อารยา เอ ฮาร์เก็ต	   4/4		    -          ChomTong	         Chiang Mai	    50160       TMB
+ซื้อสินค้าPrincess Palace จำนวน 2 ชิ้น โดยชำระ Debit Card:BAY และจัดส่งสินค้าผ่าน EMS                        3_to_5    Female      6            Princess Palace             2               Princess Palace         EMS          2      จิรานันท์ สวยงาม	   2/113	    -           Soi Dao	        Chanthaburi	    22180       BAY
+ซื้อสินค้าSleep Sheep จำนวน 3 ชิ้น โดยชำระผ่าน Debit Card:GSB และจัดส่งสินค้าผ่าน EMS                         Baby      Neutral    25             Sleep Sheep                3                 Sleep Sheep           EMS          3      Elesa Drake	     454/89		  -           ThaWung	        Lopburi	      15150       GSB
+ซื้อสินค้าTwilight Board Game จำนวน 1 ชิ้น โดยชำระผ่าน LinePay และจัดส่งสินค้าผ่าน Kerry                      over8     Neutral    12          Twilight Board Game           1           Twilight Board Game         Kerry        1      พชร ธพัชากุล	      34/9		    -           PhopPhra	       Tak	        63160      LinePay
+ซื้อสินค้าGourmet Cupcake Maker 5 ชิ้น โดยชำระผ่าน Credit Card:VISA และจัดส่งสินค้าผ่าน Kerry                6_to_8     Female     19          Gourmet Cupcake Maker         5          Gourmet Cupcake Maker        Kerry        5      Adrian Sendale	    99/45		   -        Mueang Udonthani	Udonthani	  41000       Visa
+ซื้อสินค้าMelody Express Musical Train 1ชิ้น โดยชำระผ่าน Credit Card:MASTER และจัดส่งสินค้าผ่าน Line Man     Toddler    Male       28     Melody Express Musical Train       1       Melody Express Musical Train    Line Man     1      ดาวิกา โฮร์เน่         8/56          -       Mueang Nonthaburi    Nonthaburi     11000       Master
