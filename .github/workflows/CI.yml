@@ -23,4 +23,4 @@ jobs:
         env:
           BROWSER: chrome
           ROBOT_TESTS_DIR: ${{ github.workspace }}/frontend/toys-are-not-us
-          ROBOT_OPTIONS: -v URL:http://google.com
+          ROBOT_OPTIONS: -v URL:https://yuppry.github.io/toy-are-not-us-workshop/
