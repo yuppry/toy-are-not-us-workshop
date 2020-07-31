@@ -11,7 +11,7 @@ export class ProductService {
   getAllProduct(): Observable<Product[]> {
     return of(allProduct);
   }
-  getSpecificProduct(id: number): Observable<Product> {
-    return of(allProduct.filter((p) => p.toy_id === id)[0]);
+  getSpecificProduct(toy_id: string): Observable<Product> {
+    return of(allProduct.filter((p) => p.toy_id === toy_id)[0]);
   }
 }

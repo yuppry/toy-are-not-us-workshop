@@ -1,3 +1,55 @@
+<!-- danger button Age button-->
+<div class="btn-group">
+  <button
+    id="btn_search_age"
+    type="button"
+    class="btn btn-danger dropdown-toggle"
+    data-toggle="dropdown"
+    aria-haspopup="true"
+    aria-expanded="false"
+  >
+    Age
+  </button>
+  <div class="dropdown-menu">
+    <option class="dropdown-item" value="3 to 5">3 to 5</option>
+  </div>
+</div>
+
+<div class="btn-group">
+  <button
+    id="btn_search_gender"
+    type="button"
+    class="btn btn-info dropdown-toggle"
+    data-toggle="dropdown"
+    aria-haspopup="true"
+    aria-expanded="false"
+  >
+    <!-- info button Age button-->
+    Gender
+  </button>
+  <div class="dropdown-menu">
+    <option class="dropdown-item">Female</option>
+  </div>
+</div>
+<!-- Search input-->
+<div class="row">
+  <div class="col-md-4">
+    <p>Search by AGE</p>
+    <input type="text" [(ngModel)]="filterAge" />
+  </div>
+
+  <div class="col-md-4">
+    <p>Search by GENDER</p>
+    <input type="text" [(ngModel)]="filterGender" />
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-md-4">Filtered Age by : {{ filterAge }}</div>
+  <div class="col-md-4">Filtered Gender by : {{ filterGender }}</div>
+</div>
+
+<!-- Table list -->
 <div class="table-responsive">
   <table class="table">
     <thead>
@@ -12,7 +64,13 @@
       </tr>
     </thead>
     <tbody *ngIf="products.length > 0">
-      <tr *ngFor="let product of products">
+      <tr
+        *ngFor="
+          let product of products
+            | productName: filterAge
+            | productGender: filterGender
+        "
+      >
         <th
           [routerLink]="['/product', product.toy_id]"
           style="cursor: pointer;"

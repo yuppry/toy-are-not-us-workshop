@@ -1,1 +1,30 @@
-<p>product-detail works!</p>
+<div class="table-responsive">
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Toy ID</th>
+        <th>Toy Name</th>
+        <th>Gender</th>
+        <th>Age</th>
+        <th>Price</th>
+        <th>Avaliability</th>
+        <th>Brand</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th>
+          {{ product.toy_id }}
+        </th>
+        <th>
+          {{ product.toy_name }}
+        </th>
+        <th>{{ product.gender }}</th>
+        <th>{{ product.age }}</th>
+        <th>{{ product.price }}</th>
+        <th>{{ product.avaliability }}</th>
+        <th>{{ product.brand }}</th>
+      </tr>
+    </tbody>
+  </table>
+</div>

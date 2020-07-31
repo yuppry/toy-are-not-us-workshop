@@ -9,7 +9,8 @@ import { ProductService } from '../service/product.service';
 })
 export class SearchComponent implements OnInit {
   products: Product[];
-  filterData: string = '';
+  filterAge: string = '';
+  filterGender: string = '';
 
   constructor(public service: ProductService) {}
 

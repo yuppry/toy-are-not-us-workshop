@@ -12,6 +12,8 @@ import { ThanksYouComponent } from './thanks-you/thanks-you.component';
 
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
+import { ProductNamePipe } from './pipe/product-name.pipe';
+import { ProductGenderPipe } from './pipe/product-gender.pipe';
 
 @NgModule({
   declarations: [
@@ -22,6 +24,8 @@ import { FormsModule } from '@angular/forms';
     ShippingComponent,
     PaymentComponent,
     ThanksYouComponent,
+    ProductNamePipe,
+    ProductGenderPipe,
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule, FormsModule],
   providers: [],
