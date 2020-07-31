@@ -1,4 +1,4 @@
-<div class="table-responsive">
+<!-- <div class="table-responsive">
   <table class="table">
     <thead>
       <tr>
@@ -27,4 +27,47 @@
       </tr>
     </tbody>
   </table>
+</div> -->
+<h1 id="toy_id">{{ product.toy_name }}</h1>
+<div class="row">
+  <div id="toy_picture" class="col-sm-4" style="background-color: lavender;">
+    Picture
+    <!-- <img
+      src="https://j.lnwfile.com/_/j/_raw/6n/36/81.jpg"
+      alt="toys"
+      width="200"
+      height="400"
+    /> -->
+  </div>
+
+  <div class="col-sm-8" style="background-color: lavenderblush;">
+    <div id="brand">Brand: {{ product.brand }}</div>
+    <div id="gender">Gender: {{ product.gender }}</div>
+    <div id="age">Age:{{ product.age }}</div>
+    <div id="price">Price: {{ product.price }}</div>
+    <div id="product_shipping_method">Shipping Method: Cash on delivery</div>
+    <div id="availability">Avaliability: {{ product.avaliability }}</div>
+    <label>Quantity</label>
+    <input
+      id="quantity"
+      type="number"
+      id="quantity"
+      name="quantity"
+      min="1"
+      max="5"
+    />
+    <br />
+    <div *ngIf="product.avaliability">
+      <button
+        style="background-color: rgb(255, 89, 214);"
+        id="btn_add_to_cart"
+        type="button"
+        class="btn"
+        [routerLink]="['/shopping-cart', product.toy_id]"
+      >
+        Add to cart
+      </button>
+    </div>
+    <h5 style="color: red;" *ngIf="!product.avaliability">Out of Stock</h5>
+  </div>
 </div>

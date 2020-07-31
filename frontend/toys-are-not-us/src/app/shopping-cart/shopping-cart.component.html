@@ -1,1 +1,63 @@
-<p>shopping-cart works!</p>
+<div class="container-fluid">
+  <h2>Shopping Cart</h2>
+
+  <div class="table-responsive">
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Items</th>
+          <th>Quantity</th>
+          <th>Price(THB)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th>
+            <div>
+              <p>
+                <label>toyname By brand</label>
+                <label>{{ product.brand }}</label>
+              </p>
+            </div>
+            <div>gender age</div>
+            <div>availability</div>
+            <div>Delete</div>
+          </th>
+          <th id="quantity">dropdown</th>
+          <th>price</th>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <br />
+
+  <div class="row">
+    <div class="col-sm-6">
+      <form action="/action_page.php">
+        <p>Shipping Method</p>
+        <input type="radio" id="EMS" name="shipping" value="EMS" />
+        <label for="EMS">EMS</label><br />
+        <input type="radio" id="Kerry" name="shipping" value="Kerry" />
+        <label for="Kerry">Kerry</label><br />
+        <input type="radio" id="Line Man" name="shipping" value="Line Man" />
+        <label for="Line Man">Line Man</label>
+      </form>
+      <p id="shipping_fee">Shipping fee: ใส่ราคาตามshipping</p>
+    </div>
+    <div class="col-sm-6" class="right">
+      <h4 id="subtotal_price">
+        <b>Subtotals(_ items): ทำmethodรวมราคาสินค้า</b>
+      </h4>
+      <h4 id="shipping_fee"><b>Shipping Fee:ใส่ราคา</b></h4>
+    </div>
+  </div>
+  <br />
+  <button
+    type="button"
+    class="btn btn-primary btn-lg pull-right"
+    id="btn_checkout"
+    [routerLink]="['/shipping']"
+  >
+    Process to checkout
+  </button>
+</div>

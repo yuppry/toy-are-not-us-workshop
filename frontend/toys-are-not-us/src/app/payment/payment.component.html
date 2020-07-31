@@ -1,1 +1,81 @@
-<p>payment works!</p>
+<div class="container-fluid">
+  <h2>Payment Methods</h2>
+  <div class="row">
+    <div class="col-sm-6">
+      <div class="table-responsive">
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Items</th>
+              <th>Quantity</th>
+              <th>Price(THB)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th>
+                <div>toyname By brand</div>
+                <div>gender age</div>
+                <div>availability</div>
+                <div>Delete</div>
+              </th>
+              <th>dropdown</th>
+              <th>price</th>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p>Shipping Method: วิธีขนส่ง</p>
+    </div>
+    <div class="col-sm-6">
+      <h3 id="order_summary"><b>Order Summary</b></h3>
+      <p>Items:</p>
+      <p>Shipping Fee:</p>
+      <hr />
+      <p id="total_price">Order Total</p>
+    </div>
+  </div>
+  <br />
+
+  <div class="row">
+    <div class="col-sm-6">
+      <form action="/action_page.php">
+        <p>Select payment methods</p>
+        <div>
+          <p><b>Credit</b></p>
+          <input type="radio" id="Visa" name="payment" value="Visa" />
+          <label for="Visa">Visa</label><br />
+          <input type="radio" id="Master" name="payment" value="Master" />
+          <label for="Master">Master</label><br />
+        </div>
+        <br />
+        <div>
+          <p><b>Debit</b></p>
+          <input type="radio" id="KBANK" name="payment" value="KBANK" />
+          <label for="KBANK">KBANK</label><br />
+          <input type="radio" id="SCB" name="payment" value="SCB" />
+          <label for="SCB">SCB</label><br />
+          <input type="radio" id="TMB" name="payment" value="TMB" />
+          <label for="TMB">TMB</label><br />
+          <input type="radio" id="BAY" name="payment" value="BAY" />
+          <label for="BAY">BAY</label><br />
+          <input type="radio" id="GSB" name="payment" value="GSB" />
+          <label for="GSB">GSB</label><br />
+        </div>
+        <br />
+        <p><b>Other</b></p>
+        <input type="radio" id="LinePay" name="payment" value="LinePay" />
+        <label for="LinePay">LinePay</label>
+      </form>
+    </div>
+  </div>
+  <br />
+  <button
+    type="button"
+    class="btn btn-primary btn-lg pull-right"
+    id="btn_placeorder"
+    [routerLink]="['/thankyou']"
+  >
+    Place your order
+  </button>
+</div>

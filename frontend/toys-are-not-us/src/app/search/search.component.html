@@ -31,16 +31,17 @@
     <option class="dropdown-item">Female</option>
   </div>
 </div>
+
 <!-- Search input-->
 <div class="row">
   <div class="col-md-4">
     <p>Search by AGE</p>
-    <input type="text" [(ngModel)]="filterAge" />
+    <input type="text" id="select_age" [(ngModel)]="filterAge" />
   </div>
 
   <div class="col-md-4">
     <p>Search by GENDER</p>
-    <input type="text" [(ngModel)]="filterGender" />
+    <input type="text" id="select_gender" [(ngModel)]="filterGender" />
   </div>
 </div>
 
@@ -70,11 +71,10 @@
             | productName: filterAge
             | productGender: filterGender
         "
+        [routerLink]="['/product', product.toy_id]"
+        style="cursor: pointer;"
       >
-        <th
-          [routerLink]="['/product', product.toy_id]"
-          style="cursor: pointer;"
-        >
+        <th>
           {{ product.toy_id }}
         </th>
         <th>
