@@ -1,5 +1,5 @@
 <!-- danger button Age button-->
-<div class="btn-group">
+<!-- <div class="btn-group">
   <button
     id="btn_search_age"
     type="button"
@@ -23,14 +23,14 @@
     data-toggle="dropdown"
     aria-haspopup="true"
     aria-expanded="false"
-  >
-    <!-- info button Age button-->
-    Gender
+  > -->
+<!-- info button Age button-->
+<!-- Gender
   </button>
   <div class="dropdown-menu">
     <option class="dropdown-item">Female</option>
   </div>
-</div>
+</div> -->
 
 <!-- Search input-->
 <div class="row">
@@ -83,7 +83,16 @@
         <th>{{ product.gender }}</th>
         <th>{{ product.age }}</th>
         <th>{{ product.price }}</th>
-        <th>{{ product.avaliability }}</th>
+        <th>
+          <div>
+            <label *ngIf="product.avaliability" style="color: green;">
+              Instock</label
+            >
+            <label *ngIf="!product.avaliability" style="color: red;"
+              >Out of stock</label
+            >
+          </div>
+        </th>
         <th>{{ product.brand }}</th>
       </tr>
     </tbody>

@@ -46,7 +46,11 @@
     <div id="age">Age:{{ product.age }}</div>
     <div id="price">Price: {{ product.price }}</div>
     <div id="product_shipping_method">Shipping Method: Cash on delivery</div>
-    <div id="availability">Avaliability: {{ product.avaliability }}</div>
+    <div id="availability">
+      Avaliability:
+      <label *ngIf="product.avaliability">Instock </label>
+      <label *ngIf="!product.avaliability">Out of stock </label>
+    </div>
     <label>Quantity</label>
     <input
       id="quantity"
